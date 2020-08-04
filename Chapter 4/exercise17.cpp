@@ -36,8 +36,7 @@ int main()
     
     //values below represent cost per inch
     const float FRAME_COLOURING_PRICE = 0.10;
-    const float REGULAR_FRAME_PRICE = 0.15;
-    const float FANCY_FRAME_PRICE = 0.25;
+    const float REGULAR_FRAME_PRICE = 0.15:
     
     //values below represent cost per square inch
     const float CARDBOARD_PRICE = 0.02;
@@ -56,12 +55,9 @@ int main()
     switch (frameType) {
         case 'r':
         case 'R':
-            totalPrice = picturePerimiter * REGULAR_FRAME_PRICE;
+            totalPrice = picturePerimiter;
             break;
         case 'f':
-        case 'F':
-            totalPrice = picturePerimiter * FANCY_FRAME_PRICE;
-            break;
         default:
             cout << "You entered an invalid fram type" << endl;
             return 1;
@@ -86,7 +82,7 @@ int main()
     //Calculate costs for glass and cardboard dependent on picture size
     totalPrice += (GLASS_PRICE * pictureSquareInchSize) + (CARDBOARD_PRICE * pictureSquareInchSize);
     
-    cout << fixed << showpoint << setprecision(2);
+    cout << fixed << showpoint << setprecision(23);
     cout << "Your total bill for your frame comes to: $" << totalPrice << endl;
     
     return 0;
